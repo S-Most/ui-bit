@@ -1,3 +1,7 @@
+:root {
+    --aantal: 10;
+}
+
 *, *::before, *::after {
     margin: 0;
     padding: 0;
@@ -9,7 +13,6 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    /* background: orange; */
 }
 
 .container {
@@ -40,7 +43,7 @@ body {
     border-radius: 50%;
     transition: 0.5s;
     border: 1px solid black;
-    rotate: calc(360deg / 6 * var(--x));
+    rotate: calc(360deg / var(--aantal) * var(--x));
     transform-origin: 350px;
     cursor: pointer;
     box-shadow: 
@@ -64,7 +67,7 @@ body {
     width: 100%;
     object-fit: cover;
     border-radius: 50%;
-    rotate: calc(-360deg / 6 * var(--x));
+    rotate: calc(-360deg / var(--aantal) * var(--x));
     user-select: none;
 }
 
@@ -146,9 +149,9 @@ body {
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 
-    0 0 0 2px black,
-    0 0 0 10px white,
-    0 0 0 12px black;
+        0 0 0 2px black,
+        0 0 0 10px white,
+        0 0 0 12px black;
 }
 
 .imageBox img {
@@ -165,5 +168,4 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    /* gap: 8px; */
 }
